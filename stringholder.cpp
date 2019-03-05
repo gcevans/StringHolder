@@ -5,7 +5,7 @@ StringHolder::StringHolder(const std::string &initial_string) {
     string_ = new std::string(initial_string);
 }
 
-const char * StringHolder::c_str() const noexcept {
+const char * StringHolder::c_str() const {
     if(string_) {
         return string_->c_str();
     } else {
@@ -21,15 +21,3 @@ void StringHolder::ChangeString(const char *input_string) {
     }
 }
 
-StringHolder::StringHolder(const StringHolder &source) {
-    string_ = nullptr;
-    if(source.string_) {
-        string_ = new std::string(*source.string_);
-    }
-}
-
-StringHolder::~StringHolder() {
-    if(string_){
-        delete string_;
-    }
-}

@@ -7,12 +7,9 @@ class StringHolder {
 private:
     std::string *string_;
 public:
-    StringHolder() : string_(nullptr) {};
-    StringHolder(const std::string &initial_string);
-    StringHolder(const StringHolder &source);
-    ~StringHolder();
+   StringHolder(const std::string &initial_string);
     
-    const char* c_str() const noexcept;
+    const char* c_str() const;
     void ChangeString(const char *input_string);
 };
 
