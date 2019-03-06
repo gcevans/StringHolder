@@ -1,7 +1,7 @@
-CXX = clang++
-LD = clang++
-LDFLAGS = -std=c++1y -fsanitize=address
-CXXFLAGS = -std=c++1y -Wall -Wextra -Werror -pedantic -fsanitize=address
+CXX = g++
+LD = g++
+LDFLAGS = -std=c++1y
+CXXFLAGS = -std=c++1y -Wall -Wextra -Werror -pedantic 
 RM = rm
 
 TESTS = tests
