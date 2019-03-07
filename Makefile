@@ -11,6 +11,12 @@ all : stringholder
 clean:
 	$(RM) -rf $(TARGETS) $(TESTS) *.o
 
+tests : tests.o stringholder.o
+	$(LD) $(LDFLAGS) -o tests tests.o stringholder.o
+
+tests.o : tests.cpp catch.hpp stringholder.h
+	$(CXX) -c $(CXXFLAGS) -o tests.o tests.cpp
+
 stringholder : stringholder.o main.o
 	$(LD) $(LDFLAGS) -o stringholder stringholder.o main.o
 

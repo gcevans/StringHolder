@@ -8,7 +8,7 @@ private:
     std::string *string_;
 public:
     StringHolder() : string_(nullptr) {};
-    StringHolder(const std::string &initial_string);
+    explicit StringHolder(const std::string &initial_string);
     
     const char* c_str() const noexcept;
     void ChangeString(const char *input_string);
