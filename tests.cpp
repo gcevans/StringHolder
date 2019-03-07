@@ -3,9 +3,9 @@
 #include "stringholder.h"
 
 
-
+// a) passes b) fails c) crashes
 TEST_CASE( "String Constructor", "[stringholder]" ) {
     StringHolder hello("hello, world.");
     
-    REQUIRE( hello.c_str() == "hello, world." );
+    REQUIRE( std::string(hello.c_str()) == "hello, world." );
 }
