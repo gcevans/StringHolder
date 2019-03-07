@@ -5,7 +5,7 @@ StringHolder::StringHolder(const std::string &initial_string) {
     string_ = new std::string(initial_string);
 }
 
-const char * StringHolder::c_str() const {
+const char * StringHolder::c_str() const noexcept{
     if(string_) {
         return string_->c_str();
     } else {
