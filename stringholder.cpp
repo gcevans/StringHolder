@@ -43,6 +43,7 @@ StringHolder & StringHolder::operator=(const StringHolder &source) {
         delete string_;
         string_ = new std::string( *(source.string_));
     } else {
+        delete string_;
         string_ = nullptr;
     }
     return *this;
