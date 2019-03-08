@@ -9,3 +9,10 @@ TEST_CASE( "String Constructor", "[stringholder]" ) {
     
     REQUIRE( std::string(hello.c_str()) == "hello, world." );
 }
+
+TEST_CASE ( "Assignment operator works when assigned to null string", "[stringholder]" ) {
+    StringHolder hello("hello, world.");
+    StringHolder nullString;
+    hello = nullString;
+    REQUIRE( std::string(hello.c_str()) == "");
+}
