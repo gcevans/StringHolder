@@ -6,8 +6,8 @@ StringHolder::StringHolder(const std::string &initial_string) {
     string_ = new std::string(initial_string);
 }
 
-const char * StringHolder::c_str() const noexcept{
-    if(string_) {
+const char * StringHolder::c_str() const noexcept {
+    if (string_) {
         return string_->c_str();
     } else {
         return "";
@@ -15,7 +15,7 @@ const char * StringHolder::c_str() const noexcept{
 }
 
 void StringHolder::ChangeString(const char *input_string) {
-    if(string_) {
+    if (string_) {
         *string_ = input_string;
     } else {
         string_ = new std::string(input_string);
@@ -23,7 +23,7 @@ void StringHolder::ChangeString(const char *input_string) {
 }
 
 StringHolder::StringHolder(const StringHolder &source) {
-    if(source.string_ != nullptr) {
+    if (source.string_ != nullptr) {
         string_ = new std::string( *(source.string_));
     } else {
         string_ = nullptr;
@@ -36,10 +36,10 @@ StringHolder::StringHolder(StringHolder &&source) {
 }
 
 StringHolder & StringHolder::operator=(const StringHolder &source) {
-    if(this == &source){
+    if (this == &source) {
         return *this;
     }
-    if(source.string_ != nullptr) {
+    if (source.string_ != nullptr) {
         delete string_;
         string_ = new std::string( *(source.string_));
     } else {
@@ -50,7 +50,7 @@ StringHolder & StringHolder::operator=(const StringHolder &source) {
 }
 
 StringHolder & StringHolder::operator=(StringHolder &&source) {
-    std::swap(string_,source.string_);
+    std::swap(string_, source.string_);
     return *this;
 }
 

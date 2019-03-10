@@ -4,9 +4,9 @@
 #include <string>
 
 class StringHolder {
-private:
+ private:
     std::string *string_;
-public:
+ public:
     StringHolder() : string_(nullptr) {};
     ~StringHolder();
     StringHolder(const StringHolder &source);
@@ -19,4 +19,4 @@ public:
     void ChangeString(const char *input_string);
 };
 
-#endif //STRINGHOLDER_H_
+#endif // STRINGHOLDER_H_
