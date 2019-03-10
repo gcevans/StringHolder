@@ -1,5 +1,5 @@
-#ifndef STRINGHOLDER_H
-#define STRINGHOLDER_H
+#ifndef STRINGHOLDER_H_
+#define STRINGHOLDER_H_
 
 #include <string>
 
@@ -19,4 +19,4 @@ public:
     void ChangeString(const char *input_string);
 };
 
-#endif //STRINGHOLDER_H
+#endif //STRINGHOLDER_H_
